@@ -1,0 +1,6 @@
+def add_tasks(tasks):
+    task = input("Enter the task to complete: ")
+    tasks.append(f"Task: {task}, status: Incomplete")
+    print(f"Task: {task} was added with an Incomplete status ")
+
+add_tasks(add_tasks)
