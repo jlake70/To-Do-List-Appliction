@@ -11,9 +11,18 @@ def start_menu():
 start_menu()
 
 def add_tasks(tasks):
-    task = input("Enter the task to complete: ")
-    tasks.append(f"Task: {task}, status: Incomplete")
+    task_id = input("Enter the task to complete: ")
+    tasks.append(f"Task: {task_id}, status: Incomplete")
     print(f"Task: {task} was added with an Incomplete status ")
+
+def view_tasks(tasks):
+    if not tasks:
+        print("No tasks in the list")
+    else:
+        counter = 1
+        for task in tasks:
+            counter += 1
+            print(f"{counter}. {task}, status: Incomplete")
 
 
 def run_app():
