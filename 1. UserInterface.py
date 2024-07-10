@@ -13,7 +13,7 @@ start_menu()
 def add_tasks(tasks):
     task_id = input("Enter the task to complete: ")
     tasks.append(f"Task: {task_id}, status: Incomplete")
-    print(f"Task: {task} was added with an Incomplete status ")
+    print(f"Task: {task_id} was added with an Incomplete status ")
 
 def view_tasks(tasks):
     if not tasks:
@@ -40,6 +40,7 @@ def run_app():
             delete_tasks(tasks)
         elif selection == "5":
             print("The application is shutting down. Goodbye!") 
+            print(f"This is your task list: {tasks}")
             break
         else: 
             print("Invalid option. Please make another selection.")
