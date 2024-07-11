@@ -19,10 +19,32 @@ def view_tasks(tasks):
     if not tasks:
         print("No tasks in the list")
     else:
-        counter = 1
+        counter = 0
         for task in tasks:
             counter += 1
             print(f"{counter}. {task}, status: Incomplete")
+
+def status_tasks(tasks):
+    try:
+        task_number = int(input("Which task needs to be marked as complete?: (enter which number the task is on list)"))
+        if 0 < task_number <= len(tasks):
+            tasks[task_number - 1]["status"] = "Complete"
+            print(f"Task {task_number} marked as Complete.")
+        else:
+            print("Invalid selection for task number.") 
+    except (ValueError, TypeError):
+        print("Please enter a valid number")
+
+def delete_tasks(tasks):
+    try:
+        task_number = int(input("Enter the task number to delete: "))
+        if 0 < task_number <= len(tasks):
+            deleted_task = tasks.pop(task_number - 1)
+            print(f"Task '{deleted_task['title']}' deleted.")
+        else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Please enter a valid number.")
 
 
 def run_app():
