@@ -1,5 +1,17 @@
 # To-Do-List-Appliction
 
+How To Use:
+Run the Application
+Follow the Prompts until satisfied 
+Select Quit to stop the Application
+
+
+
+
+
+
+
+
 User Interface (UI):
 Create a command-line interface (CLI) for the To-Do List Application.
 Display a welcoming message and a menu with the following options:
